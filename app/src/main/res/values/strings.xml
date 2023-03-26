@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Sleep Well</string>
+    <string name="title_name">Sleep Well</string>
+    <string name="main_title">Sleep Well</string>
+    <string name="main_history_text">Моя история сна</string>
+    <string name="main_no_sleeps_text">Снов пока не было</string>
+    <string name="main_empty_sleeps_text"></string>
+    <string name="add_sleep_title">Добавить историю сна</string>
+    <string name="add_sleep_start_text">Начало сна</string>
+    <string name="add_sleep_end_text">Конец сна</string>
+    <string name="add_sleep_date_text">Дата</string>
+    <string name="add_sleep_button_text">Добавить</string>
+    <string name="about_title">О приложении</string>
+    <string name="about_text">Приложение создано для ведения истории и качества сна пользователя.</string>
+</resources>
