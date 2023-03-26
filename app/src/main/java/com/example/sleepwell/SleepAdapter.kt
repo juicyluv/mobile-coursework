@@ -19,9 +19,23 @@ class SleepAdapter : RecyclerView.Adapter<SleepViewHolder>() {
 
     override fun getItemCount() = sleepsList.size
 
+    fun setSleeps(sleeps: ArrayList<Sleep>){
+        sleepsList.clear()
+        sleepsList.addAll(sleeps)
+        notifyDataSetChanged()
+    }
+
     fun addSleep(sleep: Sleep) {
         sleepsList.add(sleep)
         notifyDataSetChanged()
+    }
+
+    fun removeSleep(id: String) {
+        val sleepToRemove = sleepsList.find { it.id == id }
+        sleepToRemove?.let {
+            sleepsList.remove(it)
+            notifyDataSetChanged()
+        }
     }
 
     fun addAll(results: ArrayList<Sleep>) {

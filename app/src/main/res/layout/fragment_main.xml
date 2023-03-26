@@ -25,22 +25,25 @@
 
     <TextView
         android:id="@+id/levelText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="@string/main_history_text"
         android:textColor="@color/black"
         android:textSize="@dimen/h3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/settingsBar" />
+        app:layout_constraintTop_toTopOf="@+id/settingsBar" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/sleepsFragment"
-        android:name="com.example.sleepwell.SleepsFragment"
-        android:layout_width="412dp"
+        android:name="com.example.sleepwell.SleepFragment"
+        android:layout_width="350dp"
         android:layout_height="644dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/levelText"
         tools:layout="@layout/fragment_sleeps" />
 
