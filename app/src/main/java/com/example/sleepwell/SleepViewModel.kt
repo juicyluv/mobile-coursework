@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 @RequiresApi(Build.VERSION_CODES.O)
-class SleepsViewModel() : ViewModel() {
+class SleepViewModel() : ViewModel() {
     private val api = APIImpl()
 
     val sleeps: MutableLiveData<ArrayList<Sleep>> by lazy {

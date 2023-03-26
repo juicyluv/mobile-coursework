@@ -10,11 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sleepwell.databinding.FragmentSleepsBinding
 
-class SleepsFragment: Fragment() {
+class SleepFragment: Fragment() {
     private var _binding: FragmentSleepsBinding? = null
     private val binding get() = _binding!!
 
-    private var _model: SleepsViewModel? = null
+    private var _model: SleepViewModel? = null
     private val model get() = _model!!
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
@@ -22,12 +22,12 @@ class SleepsFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSleepsBinding.inflate(inflater, container, false)
-        _model = SleepsViewModel()
+        _model = SleepViewModel()
         val view: View = binding.root
 
         model.getAllSleeps()
 
-        val adapter = SleepsAdapter()
+        val adapter = SleepAdapter()
         binding.sleepsList.layoutManager = LinearLayoutManager(binding.root.context)
         binding.sleepsList.adapter = adapter
 
@@ -42,6 +42,6 @@ class SleepsFragment: Fragment() {
     }
 
     companion object {
-        fun newInstance() = SleepsFragment()
+        fun newInstance() = SleepFragment()
     }
 }
