@@ -26,4 +26,5 @@
     <string name="login">Вход</string>
     <string name="register">Регистрация</string>
     <string name="logout">Выйти</string>
+    <string name="sleep_times_separator">-</string>
 </resources>
