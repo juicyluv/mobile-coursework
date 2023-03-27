@@ -4,4 +4,6 @@ enum class FragmentType {
     MAIN,
     ABOUT,
     ADD_SLEEP,
+    SLEEPS,
+    LOGIN
 }
