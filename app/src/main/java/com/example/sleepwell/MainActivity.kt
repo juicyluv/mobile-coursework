@@ -1,8 +1,10 @@
 package com.example.sleepwell
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
@@ -36,6 +38,11 @@ class MainActivity : AppCompatActivity() {
             this.adapter = sleepAdapter
             this.setHasFixedSize(true)
         }
+    }
+
+    fun onClickAddSleep(view : View) {
+        val intent = Intent(this, AddSleepActivity::class.java)
+        startActivity(intent)
     }
 
     fun showMessage(msg: String) {
