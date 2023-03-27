@@ -10,6 +10,7 @@ import com.example.sleepwell.databinding.FragmentAboutBinding
 class AboutFragment : Fragment() {
     private var _binding: FragmentAboutBinding? = null
     private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -17,6 +18,7 @@ class AboutFragment : Fragment() {
         _binding = FragmentAboutBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     companion object {
         fun newInstance() = AboutFragment()
     }
