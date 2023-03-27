@@ -1,2 +1,9 @@
 package com.example.sleepwell
-class Sleep(val id: String, val start: String, val end: String, val rating: Int)
+
+data class Sleep(
+    val id: String,
+    var user: User,
+    var start: String,
+    var end: String,
+    var rating: Int
+)

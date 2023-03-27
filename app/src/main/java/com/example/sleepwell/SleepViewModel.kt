@@ -1,20 +1,27 @@
 package com.example.sleepwell
-import android.os.Build
-import androidx.annotation.RequiresApi
+
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-@RequiresApi(Build.VERSION_CODES.O)
-class SleepViewModel() : ViewModel() {
-    private val api = APIImpl()
-
+class SleepViewModel(private val user: User?) : ViewModel() {
+    private val api: IApi = Api()
     val sleeps: MutableLiveData<ArrayList<Sleep>> by lazy {
         MutableLiveData<ArrayList<Sleep>>()
     }
+
     init {
-        getAllSleeps()
+        getSleepsByCurrentUser()
     }
-    fun getAllSleeps() {
-        sleeps.value = api.getAllSleeps()
+
+    fun getSleepsByCurrentUser() {
+        if (user !== null) {
+            sleeps.value = api.getUserSleeps(user)
+        } else {
+            sleeps.value = arrayListOf()
+        }
+    }
+
+    fun addSleep(sleep: Sleep) {
+        api.addUserSleep(sleep)
     }
 }
