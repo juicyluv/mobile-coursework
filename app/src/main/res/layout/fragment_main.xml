@@ -6,46 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-    <Button
-        android:id="@+id/aboutButton"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/main_title"
+        android:orientation="vertical"
+        android:paddingHorizontal="5sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <GridLayout
-        android:id="@+id/settingsBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/aboutButton"/>
+        <Button
+            android:id="@+id/sleepsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/main_sleeps_button_text" />
 
-    <TextView
-        android:id="@+id/levelText"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:text="@string/main_history_text"
-        android:textColor="@color/black"
-        android:textSize="@dimen/h3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/settingsBar" />
+        <Button
+            android:id="@+id/aboutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/main_yellow"
+            android:text="@string/main_about_button_text" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/sleepsFragment"
-        android:name="com.example.sleepwell.SleepFragment"
-        android:layout_width="350dp"
-        android:layout_height="644dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/levelText"
-        tools:layout="@layout/fragment_sleeps" />
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/main_red"
+            android:text="@string/main_logout_button_text" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

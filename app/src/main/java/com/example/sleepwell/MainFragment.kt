@@ -18,25 +18,34 @@ class MainFragment : Fragment() {
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
         val view: View = binding.root
-        val aboutButton: Button = binding.aboutButton
-        val addSleepButton: Button = binding.aboutButton
 
-//        aboutButton.setOnClickListener {
-//            activity.let {
-//                (it as MainActivity).goToAboutFragment()
-//            }
-//        }
-//
-//        addSleepButton.setOnClickListener {
-//            activity.let {
-//                (it as MainActivity).goToAddSleepFragment()
-//            }
-//        }
+        val logoutButton: Button = binding.logoutButton
+        val aboutButton: Button = binding.aboutButton
+        val sleepsButton: Button = binding.sleepsButton
+
+        logoutButton.setOnClickListener {
+            activity.let {
+                (it as MainActivity).logout()
+            }
+        }
+
+        aboutButton.setOnClickListener {
+            activity.let {
+                (it as MainActivity).goToAboutFragment()
+            }
+        }
+
+        sleepsButton.setOnClickListener {
+            activity.let {
+                (it as MainActivity).goToSleepsFragment()
+            }
+        }
 
         return view
     }
 
     companion object {
+
         fun newInstance() = MainFragment()
     }
 }
